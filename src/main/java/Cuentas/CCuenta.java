@@ -1,5 +1,12 @@
 package Cuentas;
 
+/**
+ * 
+ * @author emilio garcia
+ * Tarea Entornos de desarrollo 4
+ * @version 1
+ */
+
 public class CCuenta {
 
     /**
@@ -58,15 +65,32 @@ public class CCuenta {
         this.tipoInterés = tipoInterés;
     }
 
+    /**
+     * var nombre
+     * var cuenta
+     * var saldo
+     * var tipoInteres
+     * 
+     */
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Constructor CCuenta
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * 
+     * @param nom 
+     * @param cue
+     * @param sal
+     * @param tipo 
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -74,11 +98,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * 
+     * @return saldo
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * 
+     * @param cantidad
+     * @throws Exception 
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -86,6 +119,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * 
+     * @param cantidad
+     * @throws Exception 
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
